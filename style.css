@@ -1,0 +1,117 @@
+body {
+    background-color: rgb(238 238 238);
+    direction: ltr;
+    padding: 0 0;
+    margin: 0 0;
+
+}
+
+header {
+    text-align: right;
+    background-color: #202020;
+    height: 60px;
+    width: 100%;
+}
+
+header h1 {
+    font-weight: bold;
+    color: orange;
+    text-align: left;
+    padding: 0 0;
+    margin: 0 0;
+    height: 10px;
+}
+
+/*  */
+#wel {
+
+    color: #ffbb33;
+    font-size: 1em;
+    font-weight: bold;
+    margin-right: 50px;
+    text-decoration: none;
+
+}
+
+/*  */
+#user {
+
+    border-radius: 8px;
+    text-decoration: none;
+    width: 90px;
+    color: #202020;
+    background: orange;
+    font-size: 15px;
+    height: 35px;
+    margin: 20px;
+    padding: 10px;
+    width: 100px;
+}
+
+
+
+
+
+
+
+/*  */
+#nav_id {
+    background-color: rgb(255 255 255);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    height: 60px;
+    width: 100%;
+    text-align: left;
+
+}
+
+/*  */
+#nav_id a {
+
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+
+
+
+}
+
+/*  */
+#nav_id a:hover {
+
+    font-size: 20px;
+    font-weight: bold;
+    color: orange;
+    border-bottom: 2px solid black;
+
+
+
+
+
+}
+
+
+
+/*  */
+#fieldtable {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 30px 60px 30px 60px;
+    text-align: left;
+}
+
+
+
+/*  */
+#idtable2 {
+    margin: auto;
+    background-color: #fff;
+    width: 100%;
+}
+
+/*  */
+#idtable2 td,
+th {
+    border-bottom: 1px solid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+}
