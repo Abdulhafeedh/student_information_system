@@ -95,7 +95,7 @@
 
             echo '<h2 style=" text-align: center ; background-color: rgba(211, 219, 211, 0.384);color: green;" >Update done</h2>';
            
-            // echo '<meta http-equiv="refresh" content="2; url=show_student.php">';
+            echo '<meta http-equiv="refresh" content="2; url=show_student.php">';
         }
 
         $r = mysqli_query($con, "select 	students.s_no, students.s_name, students.s_id,
@@ -103,14 +103,13 @@
         students.s_nationality,section.sec_name ,students.s_level FROM students 
         JOIN section ON students.sec_no = section.sec_no 
         where students.s_no=". $_GET["update"]);
-        // "select * from admin where admin_id=1"); //. $_GET["d"]
 
     ?>
 
         <br><br>
         <form method=post>
             <div class="head">
-                <h1>Update Admin Information</h1>
+                <h1>Update Student Information</h1>
             </div>
         <?php
         while ($f = mysqli_fetch_array($r)) {
@@ -146,7 +145,7 @@
             <option value="">Select Section</option>
            
             ';
-            $r = mysqli_query($con, "select sec_no, sec_name from section where sec_no=1");
+            $r = mysqli_query($con, "select sec_no, sec_name from section");
             while ($f = mysqli_fetch_array($r)) {
     
                 echo '<option value=' . $f["sec_no"] . '>' . $f["sec_name"] . '</option>';

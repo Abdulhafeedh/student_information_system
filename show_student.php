@@ -19,22 +19,23 @@
 		<br>
 		<a " href="index.php"><i class="fa-solid fa-house"></i>&nbsp;Home&nbsp;&nbsp;</a>
 		<a  style="color: orange; href="show_student.php"><i class="fa-solid fa-book-open-reader"></i>&nbsp;Students&nbsp;&nbsp;</a>
-		<a  href="Questions.php"><i class="fa-solid fa-clipboard-question"></i>&nbsp;Questions&nbsp;&nbsp;</a>
-		<a  href="student_exams.php"><i class="fa-solid fa-chalkboard-user"></i>&nbsp;exams</a>
-		<a  href="add_admin.php"><i class="fa-solid fa-chalkboard-user"></i>&nbsp;Add Admin</a>
+		<a  href="show_teatcher.php"><i class="fa-solid fa-clipboard-question"></i>&nbsp;Teatchers&nbsp;&nbsp;</a>
+		<a  href="show_section.php"><i class="fa-solid fa-chalkboard-user"></i>&nbsp;sections</a>
+        <a  href="show_faculty.php"><i class="fa-solid fa-chalkboard-user"></i>&nbsp;Faculty</a>
+        <a  href="show_course.php"><i class="fa-solid fa-chalkboard-user"></i>&nbsp;Courses</a>
+		<a  href="show_exam.php"><i class="fa-solid fa-chalkboard-user"></i>&nbsp;Exams</a>
+        <a  href="show_admin.php"><i class="fa-solid fa-chalkboard-user"></i>&nbsp;Admins</a>
 		</nav>';
 
-    if (isset($_GET["admin_id"])) {
+    if (isset($_GET["delete"])) {
 
-        $sql = mysqli_query($con, "delete from admin where admin_id=" . $_GET["admin_id"]);
-        // $sql = mysqli_query($con, "delete from exam where Sid=" . $_GET["d"]);
-        // $sql = mysqli_query($con, "delete from s_a where Sid=" . $_GET["d"]);
+        $sql = mysqli_query($con, "delete from students where s_no=" . $_GET["delete"]);
     }
     $sql = mysqli_query($con, "select 	students.s_no, students.s_name, students.s_id,students.s_sex,students.s_address,students.s_dob,students.s_phone_number,students.s_nationality,section.sec_name ,students.s_level FROM students JOIN section ON students.sec_no = section.sec_no 
     ");
 
     echo '<fieldset id="fieldtable" ><legend>Students</legend>
-		<div style="text-align: right;"><a href="add_update_show_student.php?add=add"  class="button_add">Add Admin</a></div><br>
+		<div style="text-align: right;"><a href="add_update_student.php?add=add"  class="button_add">Add Admin</a></div><br>
 	<table id="idtable2" >
 		<tr>
 		<th align=center>Number</th>
@@ -63,8 +64,8 @@
         echo '<td align=center>' . $f["s_nationality"] . '</td>';
         echo '<td align=center>' . $f["sec_name"] . '</td>';
         echo '<td align=center>' . $f["s_level"] . '</td>';
-        echo '<td align=center><a id="edetingancor" href=i.php?delete=' . $f["s_no"] . '>Delete&nbsp;<i class="fa-solid fa-file-circle-minus"></i></a></td>';
-        echo '<td align=center><a id="edetingancor" href=add_update_show_student.php?update=' . $f["s_no"] . '>Update&nbsp;<i class="fa-solid fa-file-circle-minus"></i></a></td>';
+        echo '<td align=center><a id="edetingancor" href=show_student.php?delete=' . $f["s_no"] . '>Delete&nbsp;<i class="fa-solid fa-file-circle-minus"></i></a></td>';
+        echo '<td align=center><a id="edetingancor" href=add_update_student.php?update=' . $f["s_no"] . '>Update&nbsp;<i class="fa-solid fa-file-circle-minus"></i></a></td>';
 
         echo '</tr>';
         $i += 1;
