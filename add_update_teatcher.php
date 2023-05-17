@@ -49,7 +49,7 @@
 
     </form>';
     }
-    if (isset($_GET["t_no"])) {
+    if (isset($_GET["update"])) {
         if (isset($_POST['sub'])) {
 
             $r = mysqli_query($con, "update teatcher set t_name='" .  $_POST["name"] . "',t_phone_number=" . $_POST["phoneNumper"] . ", t_address='" . $_POST["address"] . "',  t_salary=" . $_POST["salary"] . " where t_no=". $_GET["t_no"] ); //,Ctime='".$t."'   Cid=".$i.",
