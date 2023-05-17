@@ -90,7 +90,8 @@ button:hover {
     background: rgb(0, 105, 204);
 }
 
-@media screen and (max-width: 417px) {
+/* @media screen and (max-width: 417px) { */
+/* @media screen and (max-width: 417px) {
     form {
         width: 100%;
         height: 100%;
