@@ -57,7 +57,6 @@
         <!-- Submit Button -->
         <button>Submit</button>
 
-<<<<<<< HEAD
     </form>';
     }
     if (isset($_GET["update"])) {
@@ -69,7 +68,7 @@
             echo '<meta http-equiv="refresh" content="2; url=i.php">';
         }
 
-        $r = mysqli_query($con, "select * from admin where admin_id=1" );//. $_GET["d"]
+        $r = mysqli_query($con, "select * from admin where admin_id=1"); //. $_GET["d"]
 
     ?>
 
@@ -102,10 +101,8 @@
         </form>
 
 
-=======
-    </form>
-    <!-- /Main Form Ended -->
->>>>>>> f496250079fc42282cb4a139aa6399e9709cc386
+        </form>
+        <!-- /Main Form Ended -->
 </body>
 
 </html>
