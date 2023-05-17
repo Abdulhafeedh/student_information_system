@@ -68,7 +68,7 @@
             echo '<meta http-equiv="refresh" content="2; url=i.php">';
         }
 
-        $r = mysqli_query($con, "select * from admin where admin_id=1" );//. $_GET["d"]
+        $r = mysqli_query($con, "select * from admin where admin_id=1"); //. $_GET["d"]
 
     ?>
 
@@ -99,7 +99,9 @@
     } ?>
         </form>
 
-    </form>
+
+        </form>
+        <!-- /Main Form Ended -->
 </body>
 
 </html>
