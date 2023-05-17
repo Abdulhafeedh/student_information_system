@@ -21,7 +21,7 @@
 		<a  href="course.php"><i class="fa-solid fa-book-open-reader"></i>&nbsp;Course&nbsp;&nbsp;</a>
 		<a  href="Questions.php"><i class="fa-solid fa-clipboard-question"></i>&nbsp;Questions&nbsp;&nbsp;</a>
 		<a  href="student_exams.php"><i class="fa-solid fa-chalkboard-user"></i>&nbsp;exams</a>
-		<a  style="color: orange; href="student_exams.php"><i class="fa-solid fa-chalkboard-user"></i>&nbsp;Add Admin</a>
+		<a  style="color: orange; href="add_admin.php"><i class="fa-solid fa-chalkboard-user"></i>&nbsp;Add Admin</a>
 		</nav>';
 
 	if (isset($_GET["admin_id"])) {
@@ -33,7 +33,7 @@
 	$sql = mysqli_query($con, "select * from admin");
 
 	echo '<fieldset id="fieldtable" ><legend>Students</legend>
-		<div style="text-align: right;"><a href="add_admin.php" class="button_add">Add Admin</a></div><br>
+		<div style="text-align: right;"><a href="add_admin.php?add=add"  class="button_add">Add Admin</a></div><br>
 	<table id="idtable2" >
 		<tr>
 		<th align=center>Id</th>
