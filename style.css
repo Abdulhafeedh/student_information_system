@@ -115,3 +115,18 @@ th {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     font-size: 20px;
 }
+
+/*  */
+.button_add {
+    /* outline: none; */
+    background: #202020;
+    border: none;
+    padding: 4px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    color: orange;
+    /* cursor: pointer; */
+    /* transition: all 0.5s; */
+    text-align: right;
+    text-decoration: none;
+}
