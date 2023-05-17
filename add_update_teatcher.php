@@ -14,21 +14,13 @@
     include "connect.php";
     include "header.php";
 
-    // echo '<nav id="nav_id">
-    //     <br>
-    //     <a " href="index.php"><i class="fa-solid fa-house"></i>&nbsp;Home&nbsp;&nbsp;</a>
-    //     <a  href="course.php"><i class="fa-solid fa-book-open-reader"></i>&nbsp;Course&nbsp;&nbsp;</a>
-    //     <a  href="Questions.php"><i class="fa-solid fa-clipboard-question"></i>&nbsp;Questions&nbsp;&nbsp;</a>
-    //     <a  href="student_exams.php"><i class="fa-solid fa-chalkboard-user"></i>&nbsp;exams</a>
-    //     <a  style="color: orange; href="student_exams.php"><i class="fa-solid fa-chalkboard-user"></i>&nbsp;Add Admin</a>
-    //     </nav>';
     if (isset($_GET['add'])) {
         if (isset($_POST['sub'])) {
 
             $r = mysqli_query($con, "insert into teatcher(t_name, t_phone_number, t_address, t_salary) values ('" . $_POST["fullName"] . "','" . $_POST["phoneNumber"] . "','" . $_POST["address"] . "', " . $_POST["salary"] . "  )");
             echo '<h2 style=" text-align: center ; background-color: rgba(211, 219, 211, 0.384);
                     color: green;" >Add done</h2>';
-            // echo '<meta http-equiv="refresh" content="2; url=i.php">';
+            echo '<meta http-equiv="refresh" content="2; url=show_teatcher.php">';
         }
         echo '
     
