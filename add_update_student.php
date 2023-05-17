@@ -16,9 +16,9 @@
     include "header.php";
     if (isset($_GET['add'])) {
         if (isset($_POST['sub'])) {
-
+            $date=date('Y-m-d',strtotime( $_POST["dob"]));
             $r = mysqli_query($con, "insert into students(s_name, s_id, s_sex, s_address, s_dob, s_phone_number, s_nationality, sec_no, s_level) values ('" . $_POST["name"] . "','" . $_POST["id"] . "', '" . $_POST["sex"] .
-             "', '" . $_POST["address"] . "', '" . $_POST["dob"] . "','" . $_POST["phone_number"] . "', '" . $_POST["nationality"] . "', '" . $_POST["section_no"] . "', '" . $_POST["level"] . "')");
+             "', '" . $_POST["address"] . "', '" . $date . "','" . $_POST["phone_number"] . "', '" . $_POST["nationality"] . "', '" . $_POST["section_no"] . "', '" . $_POST["level"] . "')");
             echo '<h2 style=" text-align: center ; background-color: rgba(211, 219, 211, 0.384);
                     color: green;" >Add done</h2>';
             echo '<meta http-equiv="refresh" content="2; url=show_student.php">';
@@ -49,7 +49,7 @@
         <input type="text" placeholder="Address" name="address" required>
 
         <label>DOB:</label>
-        <input type="text" placeholder="DOB" name="dob">
+        <input type="date" placeholder="DOB" name="dob">
 
         <label>Phone Number:</label>
         <input type="text" placeholder="Phone Number" name="phone_number" required>
@@ -86,10 +86,10 @@
     }
     if (isset($_GET["update"])) {
         if (isset($_POST['sub'])) {
-
+            $date=date('Y-m-d',strtotime( $_POST["dob"]));
             $r = mysqli_query($con, "update students set s_name='" .  $_POST["name"] . "',s_id=" .
             $_POST["id"] ." , s_sex='" . $_POST["sex"] . "',  s_address='" .  $_POST["address"] . "',
-            s_dob='" . $_POST["dob"] . "', s_phone_number=" . $_POST["phone_number"] . ",
+            s_dob='" . $date . "', s_phone_number=" . $_POST["phone_number"] . ",
             s_nationality='" .  $_POST["nationality"]. "', sec_no =" . $_POST["section_no"] . ",
             s_level='" .  $_POST["level"] . "' where s_no=". $_GET["update"]); 
 
@@ -132,7 +132,7 @@
             <input type="text" placeholder="Address" name="address" value=' . $f["s_address"] . '>
     
             <label>DOB:</label>
-            <input type="text" placeholder="DOB" name="dob" value=' . $f["s_dob"] . '>
+            <input type="date" placeholder="DOB" name="dob" value=' . $f["s_dob"] . '>
     
             <label>Phone Number:</label>
             <input type="text" placeholder="Phone Number" name="phone_number" value=' . $f["s_phone_number"] . '>

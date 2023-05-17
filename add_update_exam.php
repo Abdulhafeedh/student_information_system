@@ -16,8 +16,8 @@
     include "header.php";
     if (isset($_GET['add'])) {
         if (isset($_POST['sub'])) {
-
-            $r = mysqli_query($con, "insert into exam(s_no , cour_no , e_date, e_degree, s_degree) values (" . $_POST["student_name"] . "," . $_POST["course_name"] . ", '" . $_POST["exam_date"] .
+            $date=date('Y-m-d',strtotime( $_POST["exam_date"]));
+            $r = mysqli_query($con, "insert into exam(s_no , cour_no , e_date, e_degree, s_degree) values (" . $_POST["student_name"] . "," . $_POST["course_name"] . ", '" . $date .
                 "', '" . $_POST["exam_degree"] . "', '" . $_POST["student_degree"] . "')");
             echo '<h2 style=" text-align: center ; background-color: rgba(211, 219, 211, 0.384);color: green;" >Add done</h2>';
             echo '<meta http-equiv="refresh" content="2; url=show_exam.php">';
@@ -60,7 +60,7 @@
         </select>
 
         <label >Exam Date:</label>
-        <input type="text" placeholder="Exam Date" name="exam_date" required>
+        <input type="date" placeholder="Exam Date" name="exam_date" required>
 
         <label>Exam Degree:</label>
         <input type="text" placeholder="Exam Degree" name="exam_degree">
@@ -75,9 +75,9 @@
     }
     if (isset($_GET["update"])) {
         if (isset($_POST['sub'])) {
-
+            $date=date('Y-m-d',strtotime( $_POST["exam_date"]));
             $r = mysqli_query($con, "update exam set s_no=" .  $_POST["student_name"] . ",cour_no=" .
-                $_POST["course_name"] . " , e_date='" . $_POST["exam_date"] . "',  e_degree=" .  $_POST["exam_degree"] . ",
+                $_POST["course_name"] . " , e_date='" . $date . "',  e_degree=" .  $_POST["exam_degree"] . ",
             s_degree=" . $_POST["student_degree"] . " where e_no=" . $_GET["update"]);
 
             echo '<h2 style=" text-align: center ; background-color: rgba(211, 219, 211, 0.384);color: green;" >Update done</h2>';
@@ -129,7 +129,7 @@
         </select>
 
         <label >Exam Date:</label>
-        <input type="text" placeholder="Exam Date" name="exam_date" value=' . $ff["e_date"] . '>
+        <input type="date" placeholder="Exam Date" name="exam_date" value=' . $ff["e_date"] . '>
 
         <label>Exam Degree:</label>
         <input type="text" placeholder="Exam Degree" name="exam_degree" value=' . $ff["e_degree"] . '>
