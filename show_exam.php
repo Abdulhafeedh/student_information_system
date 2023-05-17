@@ -36,7 +36,7 @@
     $sql = mysqli_query($con, "select exam.e_no, students.s_name, courses.cour_name,exam.e_date,exam.e_degree,exam.s_degree FROM exam JOIN students ON exam.s_no = students.s_no  JOIN courses  ON   exam.cour_no = courses.cour_no
     ");
 
-    echo '<fieldset id="fieldtable" ><legend>Students</legend>
+    echo '<fieldset id="fieldtable" ><legend>Exams</legend>
 		<div style="text-align: right;"><a href="add_update_exam.php?add=add"  class="button_add">Add Admin</a></div><br>
 	<table id="idtable2" >
 		<tr>

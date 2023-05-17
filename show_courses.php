@@ -30,13 +30,11 @@
     if (isset($_GET["delete"])) {
 
         $sql = mysqli_query($con, "delete from courses where cour_no=" . $_GET["delete"]);
-        // $sql = mysqli_query($con, "delete from exam where Sid=" . $_GET["d"]);
-        // $sql = mysqli_query($con, "delete from s_a where Sid=" . $_GET["d"]);
     }
     $sql = mysqli_query($con, "select courses.cour_no ,courses.cour_name,teatcher.t_name,section.sec_name ,courses.cour_level,courses.cour_term FROM courses JOIN section ON courses.sec_no = section.sec_no JOIN teatcher ON courses.t_no = teatcher.t_no
     ");
 
-    echo '<fieldset id="fieldtable" ><legend>Students</legend>
+    echo '<fieldset id="fieldtable" ><legend> Courses</legend>
 		<div style="text-align: right;"><a href="add_update_courses.php?add=add"  class="button_add">Add course</a></div><br>
 	<table id="idtable2" >
 		<tr>

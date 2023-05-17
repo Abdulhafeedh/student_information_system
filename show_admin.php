@@ -35,7 +35,7 @@
 	}
 	$sql = mysqli_query($con, "select * from admin");
 
-	echo '<fieldset id="fieldtable" ><legend>Students</legend>
+	echo '<fieldset id="fieldtable" ><legend>Admins</legend>
 		<div style="text-align: right;"><a href="add_update_admin.php?add=add"  class="button_add">Add Admin</a></div><br>
 	<table id="idtable2" >
 		<tr>
