@@ -29,7 +29,7 @@
             $r = mysqli_query($con, "insert into admin(admin_name, admin_email, admin_password, admin_phone_number) values ('" . $_POST["name"] . "','" . $_POST["email"] . "', '" . $_POST["password"] . "', '" . $_POST["phone_number"] . "')");
             echo '<h2 style=" text-align: center ; background-color: rgba(211, 219, 211, 0.384);
                     color: green;" >Add done</h2>';
-            echo '<meta http-equiv="refresh" content="2; url=i.php">';
+            echo '<meta http-equiv="refresh" content="2; url=show_addmin.php">';
         }
         echo '
     
@@ -61,7 +61,7 @@
             $r = mysqli_query($con, "update admin set admin_name='" .  $_POST["name"] . "',admin_email='" . $_POST["email"] . "', admin_password=" . $_POST["password"] . ",  admin_phone_number=" . $_POST["phone_number"] . " where admin_id=1"); //,Ctime='".$t."'   Cid=".$i.",
             echo '<h2 style=" text-align: center ; background-color: rgba(211, 219, 211, 0.384);
                     color: green;" >Update done</h2>';
-            echo '<meta http-equiv="refresh" content="2; url=i.php">';
+            echo '<meta http-equiv="refresh" content="2; url=show_addmin.php">';
         }
 
         $r = mysqli_query($con, "select * from admin where admin_id=1"); //. $_GET["d"]
