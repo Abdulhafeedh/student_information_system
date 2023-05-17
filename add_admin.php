@@ -34,27 +34,30 @@
         echo '
     
     <br><br>
-    <form method=post>
+    <!-- <div class="bg-image"></div> -->
+    <form> <!-- Header -->
         <div class="head">
-            <h1>Add Admin Information</h1>
-        </div>
+            <h1>Contact Form</h1>
+            <p>Please fill all the texts in the fields</p>
+        </div> <!-- /Header -->
 
-        <label for="fullName">Name:</label>
-        <input type="text" placeholder="Name" name="name">
+        <!-- Main Form Started -->
+        <label for="fullName">Your Name:</label>
+        <input type="text" placeholder="Full Name" name="fullName" id="fullName">
 
-        <label for="email">Email:</label>
-        <input type="email" placeholder="Email" name="email" required>
+        <label for="email">Your Email:</label>
+        <input type="email" placeholder="abcd@xyz.com" name="email" id="email" required>
 
-        <label for="subject">Password:</label>
-        <input type="text" placeholder="Password" name="password" required>
-        <label for="subject">Phone Number:</label>
-        <input type="text" placeholder="Phone Number" name="phone_number" required>
+        <label for="subject">Subject:</label>
+        <input type="subject" placeholder="Job Enquiry" name="text" id="subject" required>
 
-        <!-- <label for="message">Message:</label>
-        <textarea placeholder="Your Message Here" name="message" id="message" required></textarea> -->
-        <input class="submit_button" type="submit" name="sub" value="save">
-        <!-- <button submit_button>Submit</button> -->
+        <label for="message">Message:</label>
+        <textarea placeholder="Your Message Here" name="message" id="message" required></textarea>
 
+        <!-- Submit Button -->
+        <button>Submit</button>
+
+<<<<<<< HEAD
     </form>';
     }
     if (isset($_GET["update"])) {
@@ -99,6 +102,10 @@
         </form>
 
 
+=======
+    </form>
+    <!-- /Main Form Ended -->
+>>>>>>> f496250079fc42282cb4a139aa6399e9709cc386
 </body>
 
 </html>
