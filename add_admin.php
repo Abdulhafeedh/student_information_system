@@ -57,7 +57,6 @@
         <!-- Submit Button -->
         <button>Submit</button>
 
-<<<<<<< HEAD
     </form>';
     }
     if (isset($_GET["update"])) {
@@ -95,17 +94,12 @@
         <!-- <label for="message">Message:</label>
         <textarea placeholder="Your Message Here" name="message" id="message" required></textarea> -->
         <input class="submit_button" type="submit" name="sub" value="save">
-        <!-- <button submit_button>Submit</button> -->
         ';
         }
     } ?>
         </form>
 
-
-=======
     </form>
-    <!-- /Main Form Ended -->
->>>>>>> f496250079fc42282cb4a139aa6399e9709cc386
 </body>
 
 </html>
