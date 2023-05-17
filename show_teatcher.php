@@ -19,7 +19,7 @@
 		<br>
 		<a " href="index.php"><i class="fa-solid fa-house"></i>&nbsp;Home&nbsp;&nbsp;</a>
 		<a  href="course.php"><i class="fa-solid fa-book-open-reader"></i>&nbsp;Course&nbsp;&nbsp;</a>
-		<a style="color: orange; href="Questions.php"><i class="fa-solid fa-clipboard-question"></i>&nbsp;Questions&nbsp;&nbsp;</a>
+		<a style="color: orange; href="show_teatcher.php"><i class="fa-solid fa-clipboard-question"></i>&nbsp;teatchers&nbsp;&nbsp;</a>
 		<a  href="student_exams.php"><i class="fa-solid fa-chalkboard-user"></i>&nbsp;exams</a>
 		</nav>';
 

@@ -56,7 +56,7 @@
             $r = mysqli_query($con, "update section set sec_name='" .  $_POST["name"] . "',sec_date=" . $date . " where sec_no=" . $_GET["update"]); //,Ctime='".$t."'   Cid=".$i.",
             echo '<h2 style=" text-align: center ; background-color: rgba(211, 219, 211, 0.384);
                     color: green;" >Update done</h2>';
-            // echo '<meta http-equiv="refresh" content="2; url=i.php">';
+            echo '<meta http-equiv="refresh" content="2; url=show_section.php">';
         }
 
         $r = mysqli_query($con, "select * from section where sec_no=" . $_GET["update"]); //. $_GET["d"]

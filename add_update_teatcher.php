@@ -20,7 +20,7 @@
             $r = mysqli_query($con, "insert into teatcher(t_name, t_phone_number, t_address, t_salary) values ('" . $_POST["fullName"] . "','" . $_POST["phoneNumber"] . "','" . $_POST["address"] . "', " . $_POST["salary"] . "  )");
             echo '<h2 style=" text-align: center ; background-color: rgba(211, 219, 211, 0.384);
                     color: green;" >Add done</h2>';
-            // echo '<meta http-equiv="refresh" content="2; url=i.php">';
+            echo '<meta http-equiv="refresh" content="2; url=show_teatcher.php">';
         }
         echo '
     

@@ -54,7 +54,7 @@
             $r = mysqli_query($con, "update faculty set f_name='" .  $_POST["name"] . "',f_date=" . $date . " where f_no=" . $_GET["update"]); //,Ctime='".$t."'   Cid=".$i.",
             echo '<h2 style=" text-align: center ; background-color: rgba(211, 219, 211, 0.384);
                     color: green;" >Update done</h2>';
-            // echo '<meta http-equiv="refresh" content="2; url=i.php">';
+            echo '<meta http-equiv="refresh" content="2; url=show_faculty.php">';
         }
 
         $r = mysqli_query($con, "select * from faculty where f_no=" . $_GET["update"]); //. $_GET["d"]
