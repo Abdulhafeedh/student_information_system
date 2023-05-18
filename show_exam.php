@@ -17,7 +17,7 @@
     include "connect.php";
     echo '<nav id="nav_id">
 		<br>
-		<a " href="index.php"><i class="fa-solid fa-house"></i>&nbsp;Home&nbsp;&nbsp;</a>
+		<a " href="home.php"><i class="fa-solid fa-house"></i>&nbsp;Home&nbsp;&nbsp;</a>
 		<a  href="show_student.php"><i class="fa-solid fa-book-open-reader"></i>&nbsp;Students&nbsp;&nbsp;</a>
 		<a  href="show_teatcher.php"><i class="fa-solid fa-clipboard-question"></i>&nbsp;Teatchers&nbsp;&nbsp;</a>
 		<a  href="show_section.php"><i class="fa-solid fa-chalkboard-user"></i>&nbsp;sections</a>
