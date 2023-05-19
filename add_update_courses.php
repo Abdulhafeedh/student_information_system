@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="s.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Courses</title>
+    <link rel="stylesheet" href="css_style/form_style.css">
+    <link rel="stylesheet" href="css_style/style.css">
+    <link rel="stylesheet" href="css_style/style.css">
+    <script src="css_style/all.min.js"></script>
 </head>
 
 <body>
@@ -66,13 +68,13 @@
         <option value="Level 5">Level 5</option>
         </select>
         
-        <label >term:</label>
+        <label >Term:</label>
         <select name="term" id="">
         <option value="">Select term</option>
-        <option value="term_one">term_one</option>
-        <option value="term_two">term_two</option>
-        <option value="term_three">term_three</option>
-        </select> 
+        <option value="Term 1">Term 1</option>
+        <option value="Term 2">Term 2</option>
+        <option value="Term 3">Term 3</option>
+        </select>  
 
         <input class="submit_button" type="submit" name="sub" value="save">
 
@@ -145,12 +147,12 @@
             <option value="Level 5">Level 5</option>
             </select>
             
-            <label >term:</label>
+            <label >Term:</label>
             <select name="term" id="">
             <option value="">Select term</option>
-            <option value="term_one">term_one</option>
-            <option value="term_two">term_two</option>
-            <option value="term_three">term_three</option>
+            <option value="Term 1">Term 1</option>
+            <option value="Term 2">Term 2</option>
+            <option value="Term 3">Term 3</option>
             </select> 
     
             <input class="submit_button" type="submit" name="sub" value="save">

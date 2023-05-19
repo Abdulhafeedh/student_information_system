@@ -5,24 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="s.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Admin</title>
+    <link rel="stylesheet" href="css_style/form_style.css">
+    <link rel="stylesheet" href="css_style/style.css">
+    <link rel="stylesheet" href="css_style/style.css">
+    <script src="css_style/all.min.js"></script>
 </head>
 
 <body>
     <?php
     include "connect.php";
     include "header.php";
-
-    // echo '<nav id="nav_id">
-    //     <br>
-    //     <a " href="index.php"><i class="fa-solid fa-house"></i>&nbsp;Home&nbsp;&nbsp;</a>
-    //     <a  href="course.php"><i class="fa-solid fa-book-open-reader"></i>&nbsp;Course&nbsp;&nbsp;</a>
-    //     <a  href="Questions.php"><i class="fa-solid fa-clipboard-question"></i>&nbsp;Questions&nbsp;&nbsp;</a>
-    //     <a  href="student_exams.php"><i class="fa-solid fa-chalkboard-user"></i>&nbsp;exams</a>
-    //     <a  style="color: orange; href="student_exams.php"><i class="fa-solid fa-chalkboard-user"></i>&nbsp;Add Admin</a>
-    //     </nav>';
+    echo ' <div>';
     if (isset($_GET['add'])) {
         if (isset($_POST['sub'])) {
 
@@ -98,7 +92,7 @@
 
 
         </form>
-        <!-- /Main Form Ended -->
+        </div>
 </body>
 
 </html>

@@ -3,9 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="s.css">
+	<title>Teatchers</title>
+	<link rel="stylesheet" href="css_style/style.css">
+	<link rel="stylesheet" href="css_style/form_style.css">
+    <link rel="stylesheet" href="css_style/style.css">
+    <script src="css_style/all.min.js"></script>
 </head>
 
 <body>
@@ -52,13 +54,13 @@
     if (isset($_GET["update"])) {
         if (isset($_POST['sub'])) {
 
-            $r = mysqli_query($con, "update teatcher set t_name='" .  $_POST["name"] . "',t_phone_number=" . $_POST["phoneNumper"] . ", t_address='" . $_POST["address"] . "',  t_salary=" . $_POST["salary"] . " where t_no=". $_GET["t_no"] ); //,Ctime='".$t."'   Cid=".$i.",
+            $r = mysqli_query($con, "update teatcher set t_name='" .  $_POST["name"] . "',t_phone_number=" . $_POST["phoneNumper"] . ", t_address='" . $_POST["address"] . "',  t_salary=" . $_POST["salary"] . " where t_no=". $_GET["update"] ); //,Ctime='".$t."'   Cid=".$i.",
             echo '<h2 style=" text-align: center ; background-color: rgba(211, 219, 211, 0.384);
                     color: green;" >Update done</h2>';
-            // echo '<meta http-equiv="refresh" content="2; url=i.php">';
+            echo '<meta http-equiv="refresh" content="2; url=show_teatcher.php">';
         }
 
-        $r = mysqli_query($con, "select * from teatcher where t_no=".$_GET["t_no"]  );//. $_GET["d"]
+        $r = mysqli_query($con, "select * from teatcher where t_no=".$_GET["update"]  );//. $_GET["d"]
 
     ?>
 

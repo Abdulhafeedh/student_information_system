@@ -1,28 +1,34 @@
-<?php
-include "connect.php";
-?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="all.min.css">
-    <link rel="stylesheet" href="sign_in.css">
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <link rel="stylesheet" href="css_style/sign_in_style.css">
 
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link rel="stylesheet" href="css_style/all.min.css">
+    <script src="css_style/all.min.js"></script>
 
     <title>Sign In</title>
 </head>
 
 <body>
+    <?php
+        include "connect.php";
+    ?>
+    <header id="headId">
+
+    <span><i><img src="images/logo.png" alt="No Image"></i>Student Information System</span>
+
+    </header>
+
     <div class="container">
         <div class="left">
             <div class="text">
             </div>
             <div class="img">
-                <img src="logo.png" alt="pic">
+                <img src="images/img.png" alt="no image">
             </div>
         </div>
         <div class="right">
@@ -43,10 +49,6 @@ include "connect.php";
 
                 </div>
             </form>
-            <div class="text">
-                <p><a href="sign_up.php">إنشاء حساب جديد</a></p>
-                <p>or sign in with social media</p>
-            </div>
         </div>
     </div>
 </body>
@@ -62,18 +64,18 @@ if (isset($_POST['log'])) {
     $password = $_POST["password"];
 
 
-    session_start();
-    $_SESSION['admin'] = $email;
+    
+    $_SESSION['email'] = $email;
 
 
     $sql = "select * from admin where admin_email='" . $email . "' and admin_password='" . $password . "'";
 
-    $r = mysqli_query($connect, $sql);
+    $r = mysqli_query($con, $sql);
     if (mysqli_num_rows($r) == 0)
         echo "<script> alert('Error in your email or password..!'); </script>";
     else {
-        echo "wellcome";
-        // header("location: adminpannel.php");
+        // echo "wellcome";
+        header("location: home.php");
     }
 }
 

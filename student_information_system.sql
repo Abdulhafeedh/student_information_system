@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 17, 2023 at 12:08 AM
+-- Generation Time: May 19, 2023 at 11:58 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.1
 
@@ -40,7 +40,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`admin_id`, `admin_name`, `admin_email`, `admin_password`, `admin_phone_number`) VALUES
-(1, 'abod', 'abod@gmail.com', '123', 774029471);
+(1, 'admin', 'admin@gmail.com', '123', 555555555);
 
 -- --------------------------------------------------------
 
@@ -50,7 +50,7 @@ INSERT INTO `admin` (`admin_id`, `admin_name`, `admin_email`, `admin_password`, 
 
 CREATE TABLE `courses` (
   `cour_no` int(3) NOT NULL,
-  `cour_name` int(30) NOT NULL,
+  `cour_name` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `t_no` int(2) NOT NULL,
   `sec_no` int(2) NOT NULL,
   `cour_level` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
@@ -190,43 +190,43 @@ ALTER TABLE `teatcher`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `admin_id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `admin_id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `cour_no` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `cour_no` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `exam`
 --
 ALTER TABLE `exam`
-  MODIFY `e_no` int(4) NOT NULL AUTO_INCREMENT;
+  MODIFY `e_no` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `faculty`
 --
 ALTER TABLE `faculty`
-  MODIFY `f_no` int(2) NOT NULL AUTO_INCREMENT;
+  MODIFY `f_no` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `section`
 --
 ALTER TABLE `section`
-  MODIFY `sec_no` int(2) NOT NULL AUTO_INCREMENT;
+  MODIFY `sec_no` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `s_no` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `s_no` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `teatcher`
 --
 ALTER TABLE `teatcher`
-  MODIFY `t_no` int(2) NOT NULL AUTO_INCREMENT;
+  MODIFY `t_no` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables

@@ -1,26 +1,32 @@
 body {
-    /* background-color: rgb(238 238 238); */
+    background-color: rgb(238 238 238);
     direction: ltr;
     padding: 0 0;
     margin: 0 0;
-    background-color: white;
 
 }
 
 header {
-    text-align: right;
+    text-align: left;
     background-color: #202020;
-    height: 60px;
+    height: 65px;
     width: 100%;
+    padding-top: 6px;
+    padding-bottom: 5px;
 }
 
-header h1 {
+header span {
     font-weight: bold;
+    font-size: 30px;
     color: orange;
-    text-align: left;
-    padding: 0 0;
-    margin: 0 0;
-    height: 10px;
+    margin-right: 750px;
+    margin-left: 15px;
+}
+
+header span i img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
 }
 
 /*  */
@@ -62,6 +68,12 @@ header h1 {
     height: 60px;
     width: 100%;
     text-align: left;
+
+}
+
+#icon_id {
+    margin-left: 10px;
+    margin-right: 7px;
 
 }
 
@@ -124,27 +136,28 @@ th {
     padding: 4px;
     border-radius: 10px;
     margin-bottom: 30px;
-    color: orange;
+    color: #ffbb33;
     text-align: right;
     text-decoration: none;
 }
+
 /* card */
 
 .cart {
     display: flex;
     align-items: center;
     margin: 20px;
-    border: 1px solid #ccc;/*#ccc*/
+    border: 1px solid #ccc;
     padding: 10px;
     width: 350px;
     box-shadow: 0px 0px 40px 9px rgba(0, 0, 0, 0.1);
-
+    background-color: white;
+    border-radius: 20px;
 }
 
 .cart img {
     width: 150px;
     height: 150px;
-    /* object-fit: cover; */
     margin-right: 15px;
 }
 
@@ -159,8 +172,10 @@ th {
 }
 
 .cart-description {
-    /* margin: 15; */
     margin-left: 40px;
     font-size: 20px;
-    /* text-align: center; */
+}
+
+.move {
+    text-decoration: none;
 }
