@@ -63,8 +63,7 @@ if (isset($_POST['log'])) {
     $email = $_POST["email"];
     $password = $_POST["password"];
 
-
-    
+    session_start(); 
     $_SESSION['email'] = $email;
 
 
@@ -74,7 +73,7 @@ if (isset($_POST['log'])) {
     if (mysqli_num_rows($r) == 0)
         echo "<script> alert('Error in your email or password..!'); </script>";
     else {
-        // echo "wellcome";
+        // echo "wellcome";     
         header("location: home.php");
     }
 }
