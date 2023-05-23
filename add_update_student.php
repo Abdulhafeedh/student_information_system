@@ -64,7 +64,7 @@
         <option value="">Select Section</option>
        
         ';
-        $r = mysqli_query($con, "select sec_no, sec_name from section where sec_no=1");
+        $r = mysqli_query($con, "select sec_no, sec_name from section");
         while ($f = mysqli_fetch_array($r)) {
 
             echo '<option value=' . $f["sec_no"] . '>' . $f["sec_name"] . '</option>';
